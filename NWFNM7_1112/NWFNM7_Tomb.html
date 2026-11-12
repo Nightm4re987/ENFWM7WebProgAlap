@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Tömb elérése</title>
+
+</head>
+<body>
+    
+    <h3>Tömb elemeinek elérése kiírása</h3>
+
+    <p id="NWFNM7">  </p>
+
+    <button onclick="elso()">első elem</button>
+    <button onclick="masodik()">második elem</button>
+    <button onclick="harmadik()">harmadik elem</button>
+    <button onclick="osszes()">összes elem</button>
+
+    <script>
+        let programnyelvek = ["HTML5", "CSS3", "JS"];
+
+        function elso() {
+            document.getElementById("NWFNM7").innerHTML = programnyelvek[0];
+        }
+
+         function masodik() {
+            document.getElementById("NWFNM7").innerHTML = programnyelvek[1];
+        }
+
+         function harmadik() {
+            document.getElementById("NWFNM7").innerHTML = programnyelvek[2];
+        }
+
+         function osszes() {
+            document.getElementById("NWFNM7").innerHTML = programnyelvek[3];
+        }
+    </script>
+
+
+</body>
+</html>

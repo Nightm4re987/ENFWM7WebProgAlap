@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tömb elemének módosítása</title>
+</head>
+<body>
+    
+<h3>Tömb elemeinek módosítása</h3>
+
+<strong>előtte:</strong> <p id="NWFNM7"> </p>
+<strong>utána:</strong> <p id="NWFNM71"> </p>
+
+<button onclick="modosit()">tömbelem módosítása</button>
+
+<script>
+    let programnyelvek = ["HTML5", "CSS3", "JS"];
+    document.getElementById("NWFNM7").innerHTML = programnyelvek;
+
+    programnyelvek[1] = "c nyelv";
+
+    function modosit() {
+        document.getElementById("NWFNM71").innerHTML = programnyelvek;
+    }
+
+</script>
+</body>
+</html>
