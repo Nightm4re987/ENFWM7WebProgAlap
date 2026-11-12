@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+
+    <style>
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+   
+   footer {
+        border-top: 4px solid gray;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        width: 37.5rem;
+        text-align: right;
+   }
+   
+   
+   </style>
+</head>
+<body>
+
+    <header>
+        <h1>Videó lejátszása_NWFNM7</h1>
+    </header>
+
+
+    <section>
+        <video src="video.mp4" id="video" autoplay="false"
+        controls width="600"></video>
+
+        <div class="grid">
+            <div>
+                <button id="start">indítás</button>
+                <button id="stop">leállítás</button>
+            </div>
+        <div>
+                    <button id="startstop">indítás/leállítás</button>
+        </div>
+            <div>
+
+            <button id="mute">néma</button>
+            <button id="quite">halk</button>
+            <button id="loud">hangos</button>
+
+        </div>
+        <div>
+            <button id="veryslow">nagyonlassu</button>
+            <button id="slow">lassu</button>
+            <button id="loud">hangos</button>
+            <button id="veryloud">nagyonhangos</button>
+            <button id="fast">gyors</button>
+            <button id="veryfast">nagyongyors</button>
+
+        </div>
+        <div>
+
+            <button id="small">kicsi</button>
+            <button id="normalsize">normál</button>
+            <button id="big">nagy</button>
+
+
+        </div>
+        <div>
+
+            <button id="hasitated">befejeződött-e?</button>
+            <button id="lenght">videó hossza (mp)</button>
+            <button id="currently">jelenlegi pozíció</button>
+
+
+        </div>
+    </section>
+
+
+    <footer>
+        forrás: <a href=" https://www.w3schools.com/html/html5_video.asp"> https://www.w3schools.com/html/html5_video.asp</a>
+        </footer>
+
+        <script>
+
+            let btnclick = (id, onclick) => document.getElementById
+            (id).addeventlistener("click", onclick);
+
+            const video = document.querySelector("video");
+
+            btnclick("start", () => video.play());
+
+            btnclick("stop", () => video.pause ());
+            btnclick("startstop", () => video.paused ? video.play ());
+
+            btnclick("loud", () => video.volume ());
+            btnclick("", () => video.playbackRate = 0.5 ());    
+            btnclick("loud", () => video.volume = 0 ());
+            btnclick("loud", () => video.volume = 0.5 ());
+
+            btnclick("veryslow", () => playbackRate = 1 ());
+                btnclick("slow", () => playbackRate = 1 ());
+                    btnclick("normal", () => playbackRate = 1 ());
+
+        </script>
+
+
+
+</body>
+</html>
