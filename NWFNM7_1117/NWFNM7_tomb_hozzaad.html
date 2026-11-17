@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Tömb hozzaad, ill. hossza</title>
+</head>
+
+<body>
+
+    <h3>Tömb elemeihez hozzáadása, hossza</h3>
+    <strong>Előtte:</strong> <p id="NWFNM7"> </p>
+    <strong>Utána:</strong> <p id="NWFNM71"> </p>
+
+    <strong>Tömb Hossza:</strong> <p id="NWFNM72"> </p>
+
+    <button onclick="hozzaad()">Új érték hozzáadása</button>
+    <button onclick="hoszz()">Tömb hossza</button>
+
+    <script>
+
+        let prognyelvek = ["HTML5","CSS3", "JS"];
+        document.getElementById("NWFNM7").innerHTML = prognyelvek;
+
+        function hozzaad() {
+            prognyelvek.push("C nyelv");
+            document.getElementById("NWFNM71").innerHTML = prognyelvek;
+        }
+
+        function hossz() {
+            document.getElementById("NWFNM72").innerHTML = prognyelvek.length;
+        }
+
+    </script>
+ </body>
+</html>
