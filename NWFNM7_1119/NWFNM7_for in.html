@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>for in</title>
+</head>
+<body>
+    
+    <h2>for in</h2>
+
+    <script>
+        let tomb = new Array("HTML5", "CSS3", "JS");
+
+        tomb[10] = "Jquery";
+         tomb[4] = "SQL";
+          tomb["X"] = "AJAX";
+           tomb[5] = "Javascript";
+
+
+           let elemek = "";
+
+           for (let i in tomb) {
+            elemek += i + ": " + tomb[i] + "<br />";
+           }
+           document.write(elemek);
+    </script>
+
+
+
+
+
+</body>
+</html>
