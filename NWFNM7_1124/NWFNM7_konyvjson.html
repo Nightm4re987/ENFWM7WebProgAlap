@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON könyv</title>
+</head>
+
+<body>
+    
+<header><h1>JSON megvalósítása - javascript</h1></header>
+
+<h3>Könyvek listája</h3>
+
+<div id="könyvlista"></div>
+
+<script>
+    let könyvekJSON = {
+        "könyvek": {
+            "könyv":[]
+        }
+        "iro": "Nyékné Dr. Gaizler Judit", 
+        "cim": "java 22 1-2 - Útikalauz programozóknak 5.0",
+        "kiadas_eve": 2009
+}
+{
+    "iro": "Nyékné Dr. Gaizler Judit", 
+        "cim": "java 22 1-2 - Útikalauz programozóknak 5.0",
+        "kiadas_eve": 2018
+}
+
+let könyvlistaelem = document.getElementById("könyvlista");
+
+let konyvlistahtml = "<ul>";
+
+for (let i = 0; i < könyvekJSON.könyvek.könyv.length; i++) {
+    let könyv = könyvekJSON.könyvek.könyv[i];
+    konyvlistahtml += "<li><strong>szerzo: </strong>" + könyv.szerzo + "<strong> cim: </strong>" + könyv.cim + "<strong> kiadás éve: </strong>" + könyv.kiadas_eve + "</li>";
+    }
+
+    konyvlistahtml += "</ul>";
+
+    konyvlistaelem.innerhtml = konyvlistahtml;
+
+</script>
+
+</body>
+</html>

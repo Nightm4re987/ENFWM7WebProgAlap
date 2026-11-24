@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>if else elágazás</title>
+
+    <script>
+        let szamok = [-241, 41, 421, 0,31, -31, 10, -3, 7];
+        let pozitivszamok = [];
+        let nempazitivszamok = [];
+        let nullaszamok = [];
+        
+        function elagazas() {
+            for (let i=0; i < szamok.length; i++)
+        {
+            if (szamok[i] > 0)
+        {
+            pozitivszamok.push(szamok[i]);
+        }
+        
+            else if (szamok[i] < 0)
+    {
+        negativszamok.push(szamok[i]);
+    }
+
+        else
+
+        {
+            nullaszamok.push(szamok[i]);
+        }
+
+        document.getElementById("pozitiv").innerHTML = pozitivszamok;
+        document.getElementById("negativ").innerHTML = nempozitivszamok;
+       document.getElementById("nulla").innerHTML = nullaszamok;
+    }
+        }
+
+    </script>
+</head>
+
+<body>
+    
+    <h2>if else if</h2>
+    pozitiv szamok: <p id="pozitiv"> </p>
+    nem pozitiv szamok: <p id="negativ"> </p>
+    nulla: <p id="nulla"> </p>
+
+<button onclick="elagazas()">pozitiv és negativ és nulla szamok</button>
+</body>
+</html>
